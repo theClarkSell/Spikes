@@ -1,0 +1,17 @@
+﻿@functions {
+    
+    public static IList<dynamic> GetRecentShow()
+    {
+        return OData.Get(@"http://developersmackdown.com/services/odata/Shows?$orderby=ShowId%20desc&$top=1");
+    }
+
+}
+
+@helper GetLatestShow() {
+    var show = DeveloperSmackdown.GetRecentShow();
+            
+    <p>@show[0].Title</p>
+    <p>@show[0].Description</p>
+    <p><a href="@show[0].PublicUri" class="more">Listen Now &raquo;</a></p>
+        
+}

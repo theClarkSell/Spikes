@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="Clark Sell" />
+        <title>Consuming an OData Service from jQuery</title>
+
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.6.2.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script> <!-- http://api.jquery.com/category/plugins/templates/ -->
+        
+        <script src="/scripts/dsshows.js"></script>
+        
+    </head>
+    <body>
+        <p>On Developer Smackdown</p>
+        <script id="dsListTemplate">
+            <ul>
+                <li><a href="${PublicUri}" target="blank">${Title}</a></li>
+            </ul>
+        </script>
+        <div id="ds_shows"></div>
+    </body>
+</html>
