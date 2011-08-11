@@ -1,0 +1,24 @@
+﻿
+@section scripts {
+    <script>
+    
+        $(document).ready( function () { 
+            
+        
+            undefined = "something";
+            
+            var myFunc = function ( x ) {
+                "use strict";        
+                
+                //seriously you shouldn't do that...
+                undefined = "something";
+            }
+            
+            myFunc();
+                               
+        });
+        
+    </script>
+}
+
+@DateTime.Now.Ticks
