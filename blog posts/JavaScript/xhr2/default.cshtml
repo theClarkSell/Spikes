@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script type="text/javascript" src="/scripts/jquery-1.6.2.js"></script>
+        
+        <script>
+
+            $(document).ready( function () {
+
+                var xhr = new XMLHttpRequest();
+
+                //xhr.open('GET', 'http://developersmackdown.com/services/odata/Shows(PodcastId=1,ShowId=54)?$format=json');
+                xhr.open('GET', 'http://developersmackdown.com/services/odata/Shows(PodcastId=1,ShowId=54)');
+                xhr.setRequestHeader('accept', 'application/json');
+
+                xhr.onload = function (e) {  
+                    
+                    //alert("in callback");
+                    $('#result').text(this.responseText);
+                    
+                    var data = JSON.parse(this.responseText);
+                    $('#x').text(data.d.Title);
+                }
+            
+                xhr.send();
+            });
+
+        </script>
+    
+    </head>
+    <body>
+        @DateTime.Now.Ticks        
+        <div id="x"></div>
+        <div id="result"></div>
+    </body>
+</html>

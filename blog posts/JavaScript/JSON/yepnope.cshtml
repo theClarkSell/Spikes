@@ -1,0 +1,24 @@
+﻿@section scripts {
+    
+    <script type="text/javascript" src="/scripts/yepnope.js"></script>
+    
+    <script>
+        
+        yepnope({
+            test: window.JSON,
+            nope: "/scripts/json2/json2.js",
+            complete: function () {
+                $(document).ready( function() {
+                    var sampleJsonObj = {
+                        firstName: 'clark',
+                        lastName: 'sell'
+                    };
+
+                    var result = JSON.stringify(sampleJsonObj);
+                    alert(result);
+                });        
+            }
+        });
+        
+    </script>
+}

@@ -1,4 +1,2 @@
 
-# WebMatrix 2.0
-
 # WebMatrix 1.0

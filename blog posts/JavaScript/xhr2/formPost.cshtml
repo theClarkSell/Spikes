@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    
+        <script type="text/javascript" src="/scripts/jquery-1.6.2.js"></script>
+        <script type="text/javascript" src="/scripts/scratch.js"></script>
+        
+        <script>
+            
+            $(document).ready( function () {
+
+                var saveState = function (jsonBlob) {
+                    $('#result').text(jsonBlob);
+                    //save to local here
+                };                
+
+
+                $("#submit").click(function () {
+                    sendForm(this.form);
+                });
+                
+                $("#query").click(function () {
+                    var eventName = $('input#eventName').val();                    
+                    $('#result').text(queryService());
+                });
+
+                $("#getImage").click(function () {
+                    //$('#result').text(queryService());
+                    getBlob();
+                });
+
+            });
+
+        </script>
+    
+    </head>
+    <body>
+        
+        <form id="createPodcast" action="">
+            <input type="text" name="Name" id="name" value="Developer Smackdown"/>
+            <input type="text" name="Artist" id="artist" value="Clark Sell"/>
+            
+            <input type="button" id="submit" value="Submit Form"/>
+            <input type="button" id="query" value="Query Service"/>
+            <input type="button" id="getImage" value="Get image"/>
+        </form>
+        <hr/>
+        
+        <div id="result"></div>
+        
+    </body>
+</html>

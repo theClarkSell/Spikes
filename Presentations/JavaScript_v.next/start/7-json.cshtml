@@ -1,0 +1,32 @@
+﻿@{
+    Page.Title = "polyfill javascript with yepnope";
+}
+
+@section scripts {
+    
+    <script type="text/javascript" src="/scripts/yepnope.js"></script>
+    <script>
+        $(document).ready( function () {
+
+            var stringMe = function () {
+                var sampleJsonObj = {
+                    firstName: 'clark',
+                    lastName: 'sell'
+                };
+                
+                var result = JSON.stringify(sampleJsonObj);
+                $('#results').text(result);
+            
+            };
+            
+            $('#button').click( function () {
+                
+                // add the JSON polyfill with yepnope
+                
+            });
+        });
+    </script>
+}
+
+<button id="button">Make Some JSON</button>
+<div id="results"></div>

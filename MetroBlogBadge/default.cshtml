@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        
+        <script type="text/javascript" src="/content/jquery-1.6.2.js"></script>
+        <script type="text/javascript" src="/content/jquery.cycle.all.js"></script>
+        <script type="text/javascript" src="/content/jquery.easing.1.3.js"></script>
+        
+        <script type="text/javascript"> 
+            $(document).ready(function() {
+                var randomDelay = function() {
+                    var min = -2000;
+                    var max = -8000;
+                    var wait = Math.round(Math.random() * (max - min) + min);
+                    return wait;  
+                };
+                
+                
+                $('.s2').cycle({ 
+                    fx: 'scrollDownTopHalf', 
+                    randomizeEffects: 0,
+                    easing: 'easeOutExpo',
+                    speed: 3000,
+                    delay: -2000,
+                    timeoutFn: randomDelay,
+                    random: 0,
+                    pause: 1,
+                });
+            });
+        </script> 
+        
+    </head>
+    <body>
+         <p>   
+            <table cellspacing="5">
+                <tr>
+                    <td>
+                        <div class="s2" > 
+                            <a href="http://create.msdn.com/en-us/home/getting_started" target="_blank">
+                                <img src="/content/images/blogBadges/AppHub_01_125px.png" title="AppHub Download Center" border="0px"/>
+                            </a>
+                            <a href="http://create.msdn.com/en-us/home/getting_started" target="_blank">
+                                <img src="/content/images/blogBadges/AppHub_MetroTile_125px.png" title="AppHub Download Center" border="0px"/>
+                            </a>
+                            <a href="http://www.microsoft.com/windowsazure/sdk/" target="_blank">
+                                <img src="/content/images/blogBadges/Azure_01_125px.png" title="Azure SDk Download" border="0px" />
+                            </a>
+                            <a href="http://www.microsoft.com/windowsazure/sdk/" target="_blank">
+                                <img src="/content/images/blogBadges/Azure_MetroTile_125px.png" title="Azure SDk Download" border="0px"/>
+                            </a>
+                        </div>    
+                    </td>
+                    <td>
+                        <div class="s2" >
+                            <a href="http://www.microsoft.com/windowsazure/sdk/" target="_blank">
+                                <img src="/content/images/blogBadges/Azure_MetroTile_125px.png" title="Azure SDk Download" border="0px"/>
+                            </a>
+                            <a href="http://www.microsoft.com/windowsazure/sdk/" target="_blank">
+                                <img src="/content/images/blogBadges/Azure_02_125px.png" title="Azure SDK Download" border="0px"/>
+                            </a>
+                            <a href="http://msdn.com/visualstudio" target="_blank">
+                                <img src="/content/images/blogBadges/VisualStudio_MetroTile_125px.png" title="Visual Studio Download Center" border="0px"/>
+                            </a>
+                            <a href="http://msdn.com/visualstudio" target="_blank">
+                                <img src="/content/images/blogBadges/VisualStudio_01_125px.png" title="Visual Studio Download Center" border="0px" />
+                            </a>
+                            
+                        </div>    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="s2" >
+                            <a href="http://create.msdn.com/en-us/home/getting_started" target="_blank">
+                                <img src="/content/images/blogBadges/PhoneXbox_MetroTile_125px.png" title="AppHub Download Center" border="0px"/>
+                            </a>
+                            <a href="http://create.msdn.com/en-us/home/getting_started" target="_blank">
+                                <img src="/content/images/blogBadges/PhoneSDK_01_125px.png" title="AppHub Download Center" border="0px"/>
+                            </a>
+                            <a href="http://on.csell.net/wminstall" target="_blank">
+                                <img src="/content/images/blogBadges/WebMartix_MetroTile_125px.png" title="WebMatrix Install" border="0px"/>
+                            </a>
+                            <a href="http://on.csell.net/wminstall" target="_blank">
+                                <img src="/content/images/blogBadges/WebMartix_01_125px.png" title="WebMatrix Install" border="0px" />
+                            </a>
+                        </div>        
+                    </td>
+                    <td>
+                        <div class="s2">
+                            <a href="http://create.msdn.com/en-us/home/getting_started" target="_blank">
+                                <img src="/content/images/blogBadges/PhoneSDK_02_125px.png" title="AppHub Download Center" border="0px"/>
+                            </a>
+                            <a href="http://create.msdn.com/en-us/home/getting_started" target="_blank">
+                                <img src="/content/images/blogBadges/PhoneXbox_MetroTile_125px.png" title="AppHub Download Center" border="0px"/>
+                            </a>
+                            <a href="http://on.csell.net/wminstall" target="_blank">
+                                <img src="/content/images/blogBadges/WebMartix_02_125px.png" title="WebMatrix Install" border="0px" />
+                            </a>
+                            <a href="http://on.csell.net/wminstall" target="_blank">
+                                <img src="/content/images/blogBadges/WebMartix_MetroTile_125px.png" title="WebMatrix Install" border="0px"/>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </p>     
+    </body>
+</html>
